@@ -39,8 +39,8 @@ const Navbar = () => {
             <div className="flex-1 md:text-center text-3xl font-bold">Blogo</div>
             {/* NAV_LINKS */}
             <div className="flex items-center justify-end gap-4 flex-1 ">
-                <div className="hidden md:flex items-center gap-4">
                     <ThemeToggle />
+                <div className="hidden md:flex items-center gap-4">
                     {links.map((link, index) => (
                         <Link
                             key={index}

@@ -3,15 +3,19 @@
 import { useEffect, useState } from "react";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
+
+
 const ThemeToggle = () => {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(() => {
+        return localStorage.getItem("theme") === "dark";
+    });
 
     const toggleTheme = () => setDarkMode(prev => !prev);
 
     useEffect(() => {
         const theme = localStorage.getItem("theme");
-        if(theme === "dark") setDarkMode(true)
-    },[])
+        if (theme === "dark") setDarkMode(true)
+    }, [])
 
     useEffect(() => {
         if (darkMode) {

@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div className="container ">
       <Featured/>
-      <CategoryList/>
-      <div className="">
+      <CategoryList withImage/>
+      <div className="flex  flex-col lg:flex-row gap-12">
         <CardList/>
         <Menu/>
       </div>

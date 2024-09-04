@@ -23,3 +23,7 @@ body {
 .wrapper {
   @apply w-full 2xl:max-w-[1536px] xl:max-w-[1366px] lg:max-w-[1024px]  mx-auto px-8 sm:px-10 lg:px-20
 }
+
+.title {
+  @apply capitalize font-semibold text-3xl my-12
+}
