@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:white;
+  --textColor:black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  @apply w-full 2xl:max-w-[1536px] xl:max-w-[1366px] lg:max-w-[1024px]  mx-auto px-8 sm:px-10 lg:px-20
+}
