@@ -22,7 +22,7 @@ const CategoryList = ({ withImage }) => {
                             <Link
                                 key={index}
                                 href={link.path}
-                                className={`w-full sm:w-[48%] md:w-[16%] h-20 ${link.bgColor} flex items-center justify-center gap-2 p-4 text-textColor rounded-md capitalize`}
+                                className={`w-[48%] md:w-[16%] h-20 ${link.bgColor} flex items-center justify-center gap-2 p-4 text-textColor rounded-md capitalize`}
                             >
                                 <Image
                                     src={`/${link.img}`}

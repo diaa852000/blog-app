@@ -9,6 +9,7 @@ import AuthLinks from "./AuthLinks";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import Image from "next/image";
 
 const links = [
     { path: "/", label: "Home" },
@@ -36,10 +37,21 @@ const Navbar = () => {
                 </button>
             </div>
             {/* LOGO */}
-            <div className="flex-1 md:text-center text-3xl font-bold">Blogo</div>
+            <div className="flex-1 md:text-center text-3xl font-bold mt-1">
+                <Link className="flex items-center justify-start md:justify-center gap-2" href={'/'}>
+                    <Image
+                        src={'/logo.png'}
+                        alt="logo"
+                        width={40}
+                        height={40}
+                        className="bg-white rounded-full ring-[1.5px] ring-bgDark"
+                    />
+                    <h1 className="text-2xl font-semibold uppercase text">logo</h1>
+                </Link>
+            </div>
             {/* NAV_LINKS */}
             <div className="flex items-center justify-end gap-4 flex-1 ">
-                    <ThemeToggle />
+                <ThemeToggle />
                 <div className="hidden md:flex items-center gap-4">
                     {links.map((link, index) => (
                         <Link
@@ -63,7 +75,18 @@ const Navbar = () => {
             </button>
             <div className={`md:hidden flex flex-col h-screen w-full overflow-hidden bg-bg dark:bg-bgDark z-20 shadow fixed top-0 ${open ? "left-0" : "-left-[200vw]"} transition-all duration-300 ease-linear px-8`}>
                 <div className="flex items-center justify-between p-8">
-                    <div className="flex-1 md:text-center text-3xl font-bold">Blogo</div>
+                    <div className="flex-1 md:text-center text-3xl font-bold">
+                        <Link className="flex items-center justify-start gap-2" href={'/'}>
+                            <Image
+                                src={'/logo.png'}
+                                alt="logo"
+                                width={40}
+                                height={40}
+                                className="bg-white rounded-full ring-[1.5px] ring-bgDark"
+                            />
+                            <h1 className="text-2xl font-semibold uppercase text">logo</h1>
+                        </Link>
+                    </div>
                     <button
                         type="button"
                         className="w-6 h-6"
