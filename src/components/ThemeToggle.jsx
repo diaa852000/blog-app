@@ -6,24 +6,26 @@ import { CiDark } from "react-icons/ci";
 
 
 const ThemeToggle = () => {
-    const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem("theme") === "dark";
-    });
+    const [darkMode, setDarkMode] = useState(false);
 
     const toggleTheme = () => setDarkMode(prev => !prev);
 
     useEffect(() => {
-        const theme = localStorage.getItem("theme");
-        if (theme === "dark") setDarkMode(true)
+        if (typeof window !== undefined) {
+            const theme = localStorage.getItem("theme");
+            if (theme === "dark") setDarkMode(true)
+        }
     }, [])
 
     useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("theme", "light");
+        if (typeof window !== undefined) {
+            if (darkMode) {
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("theme", "light");
+            }
         }
     }, [darkMode])
 

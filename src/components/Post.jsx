@@ -20,7 +20,7 @@ const Post = () => {
                 <Link
                     href={'/'}
                 >
-                    <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                    <h1 className="text-2xl font-bold dark:text-textDark">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
                 </Link>
                 <p className="text-base font-light text-softTextColor dark:text-softDarkTextColor">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, hic ipsum. Veniam, odio?
@@ -28,7 +28,7 @@ const Post = () => {
                 </p>
                 <Link
                     href={'/'}
-                    className="capitalize text-base border-b border-textColor dark:border-textDark font-medium w-max p-0.5"
+                    className="capitalize text-base border-b border-textColor dark:border-textDark dark:text-textDark font-medium w-max p-0.5"
                 >
                     read more
                 </Link>
